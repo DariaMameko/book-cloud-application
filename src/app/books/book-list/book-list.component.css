@@ -3,7 +3,12 @@
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    height: 80px;
+    height: 70px;
+    border-bottom: 1px solid #888;
+}
+
+.book-app__item:last-of-type {
+    border-bottom: 0;
 }
 
 .book-image {
@@ -15,4 +20,14 @@
 .book-text {
     font-size: 36px;
     margin: 0;
+}
+
+.book-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.book-details {
+    margin: 0 !important;
 }

@@ -22,8 +22,8 @@
         <label for="book-phone-work">Picture</label>
         <input class="form-control" name="book-picture" [(ngModel)]="book.picture" placeholder="Picture"/>
       </div>
-      <button class="btn btn-primary" *ngIf="!book._id" (click)="createBook(book)">Create</button>
-      <button class="btn btn-info" *ngIf="book._id" (click)="updateBook(book)">Update</button>
-      <button class="btn btn-danger" *ngIf="book._id" (click)="deleteBook(book._id)">Delete</button>
+      <button class="btn" *ngIf="!book._id" (click)="createBook(book)">Add to Book Shell</button>
+      <button class="btn" *ngIf="book._id" (click)="updateBook(book)">Update Book</button>
+      <button class="btn btn-danger" *ngIf="book._id" (click)="deleteBook(book._id)">X</button>
     </form>
   </div>
