@@ -2,12 +2,12 @@
     <div class="col-md-5">
       <h2>Books</h2>
       <ul class="list-group">
-        <li class="list-group-item"
+        <li class="list-group-item book-app__item"
           *ngFor="let book of books"
           (click)="selectBook(book)"
-          [class.active]="Book === selectedBook">
-          <p>{{book.name}}</p>
-          <img src="{{book.picture}}" alt="Picture">
+          [class.active]="book === selectedBook">
+          <p class="book-text">{{book.name}}</p>
+          <img src="{{book.picture}}" alt="Picture" class="book-image">
         </li>
       </ul>
       <button class="btn btn-warning" (click)="createNewBook()">New</button>
