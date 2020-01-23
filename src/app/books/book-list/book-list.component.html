@@ -1,0 +1,23 @@
+<div class="row">
+    <div class="col-md-5">
+      <h2>Books</h2>
+      <ul class="list-group">
+        <li class="list-group-item"
+          *ngFor="let book of books"
+          (click)="selectBook(book)"
+          [class.active]="Book === selectedBook">
+          <p>{{book.name}}</p>
+          <img src="{{book.picture}}" alt="Picture">
+        </li>
+      </ul>
+      <button class="btn btn-warning" (click)="createNewBook()">New</button>
+    </div>
+    <div class="col-md-5 col-md-offset-2">
+      <book-details
+        [book]="selectedBook"
+        [createHandler]="addBook"
+        [updateHandler]="updateBook"
+        [deleteHandler]="deleteBook">
+      </book-details>
+    </div>
+</div>
